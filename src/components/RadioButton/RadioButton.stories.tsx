@@ -1,8 +1,8 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { RadioButton } from './RadioButton';
+import { Meta, StoryObj } from "@storybook/react";
+import { RadioButton } from "./RadioButton";
 
 const meta: Meta<typeof RadioButton> = {
-  title: 'Components/RadioButton',
+  title: "Components/RadioButton",
   component: RadioButton,
 };
 
@@ -11,9 +11,9 @@ type Story = StoryObj<typeof RadioButton>;
 
 export const Default: Story = {
   args: {
-    label: 'Option Choice A',
-    name: 'group1',
-    value: 'a',
+    label: "Option Choice A",
+    name: "group1",
+    value: "a",
     checked: true,
     disabled: false,
   },

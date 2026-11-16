@@ -3,5 +3,5 @@ export interface ImgProps {
   alt: string;
   width?: string;
   height?: string;
-  borderRadius?: string;
+  className?: string;
 }

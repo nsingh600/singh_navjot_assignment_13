@@ -23,12 +23,16 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky",
+    "lint": "eslint \"src/**/*.{ts,tsx,js,jsx}\"",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\""
   },
   "eslintConfig": {
-  "extends": [
-    "react-app",
-    "react-app/jest"
+    "extends": [
+      "react-app",
+      "react-app/jest"
     ]
   },
   "browserslist": {
@@ -52,8 +56,15 @@
     "@storybook/react-webpack5": "^10.6.3",
     "@testing-library/jest-dom": "^7.0.1",
     "@types/styled-components": "^5.1.36",
+    "@typescript-eslint/eslint-plugin": "^8.72.2",
+    "@typescript-eslint/parser": "^8.72.2",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-storybook": "^10.6.3",
+    "husky": "^9.1.7",
     "jest-styled-components": "^7.4.0",
+    "prettier": "^3.10.1",
     "prop-types": "latest",
     "storybook": "^10.6.3",
     "webpack": "latest"

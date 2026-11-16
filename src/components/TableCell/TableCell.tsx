@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { TableCellProps } from './TableCell.types';
+import React from "react";
+import styled from "styled-components";
+import { TableCellProps } from "./TableCell.types";
 
 const StyledTd = styled.td`
   padding: 12px 16px;
@@ -19,7 +19,10 @@ const StyledTh = styled.th`
   font-size: 14px;
 `;
 
-export const TableCell: React.FC<TableCellProps> = ({ children, isHeader = false }) => {
+export const TableCell: React.FC<TableCellProps> = ({
+  children,
+  isHeader = false,
+}) => {
   if (isHeader) {
     return <StyledTh>{children}</StyledTh>;
   }

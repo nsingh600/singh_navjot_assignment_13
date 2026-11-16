@@ -1,31 +1,30 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { Button } from './Button';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Button } from "./Button";
 
 const meta: Meta<typeof Button> = {
-  title: 'Components/Button',
+  title: "Assignment13/Button",
   component: Button,
+  tags: ["autodocs"],
   argTypes: {
-    backgroundColor: { control: 'color' },
-    text: { control: 'text' },
-    disabled: { control: 'boolean' },
+    backgroundColor: { control: "color" },
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Default: Story = {
+export const Primary: Story = {
   args: {
-    text: 'Click Me',
-    backgroundColor: '#007bff',
-    disabled: false,
+    primary: true,
+    label: "Primary Button",
+    size: "medium",
   },
 };
 
-export const Disabled: Story = {
+export const Secondary: Story = {
   args: {
-    text: 'Disabled Button',
-    backgroundColor: '#007bff',
-    disabled: true,
+    primary: false,
+    label: "Secondary Button",
+    size: "medium",
   },
 };

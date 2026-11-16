@@ -1,38 +1,47 @@
 import React from 'react';
-import styled from 'styled-components';
 import { HeroImageProps } from './HeroImage.types';
 
-const StyledHero = styled.div<{ $bgImage: string; $height: string }>`
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${(props) => props.$bgImage}) no-repeat center center/cover;
-  height: ${(props) => props.$height || '400px'};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #ffffff;
-  padding: 20px;
-  width: 100%;
-`;
-
-const HeroTitle = styled.h1`
-  font-size: 36px;
-  margin: 0 0 10px 0;
-  font-weight: 700;
-`;
-
-const HeroSubtitle = styled.p`
-  font-size: 18px;
-  margin: 0;
-  max-width: 600px;
-`;
-
-export const HeroImage: React.FC<HeroImageProps> = ({ bgImage, title, subtitle, height = '400px' }) => {
+export const HeroImage: React.FC<HeroImageProps> = ({
+  src,
+  alt,
+  title,
+  subtitle,
+  className = '',
+}) => {
   return (
-    <StyledHero $bgImage={bgImage} $height={height} data-testid="hero-image">
-      <HeroTitle>{title}</HeroTitle>
-      {subtitle && <HeroSubtitle>{subtitle}</HeroSubtitle>}
-    </StyledHero>
+    <div 
+      className={`hero-image ${className}`}
+      style={{
+        position: 'relative',
+        textAlign: 'center',
+        color: 'white',
+        marginBottom: '20px',
+        borderRadius: '8px',
+        overflow: 'hidden'
+      }}
+    >
+      <img 
+        src={src} 
+        alt={alt} 
+        style={{ width: '100%', height: '250px', objectFit: 'cover', display: 'block' }} 
+      />
+      {(title || subtitle) && (
+        <div 
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+            padding: '15px 25px',
+            borderRadius: '8px',
+            width: '80%'
+          }}
+        >
+          {title && <h2 style={{ margin: '0 0 8px 0', fontSize: '1.8rem' }}>{title}</h2>}
+          {subtitle && <p style={{ margin: '0', fontSize: '1.1rem' }}>{subtitle}</p>}
+        </div>
+      )}
+    </div>
   );
 };

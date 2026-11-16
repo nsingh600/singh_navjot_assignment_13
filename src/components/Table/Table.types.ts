@@ -1,5 +1,7 @@
 import React from 'react';
 
 export interface TableProps {
-  children: React.ReactNode;
+  headers: string[];
+  data: (string | number)[][];
+  className?: string;
 }

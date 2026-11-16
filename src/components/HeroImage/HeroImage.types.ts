@@ -1,6 +1,9 @@
+import React from 'react';
+
 export interface HeroImageProps {
-  bgImage: string;
-  title: string;
+  src: string;
+  alt: string;
+  title?: string;
   subtitle?: string;
-  height?: string;
+  className?: string;
 }

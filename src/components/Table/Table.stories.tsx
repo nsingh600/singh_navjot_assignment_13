@@ -1,8 +1,8 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { Table } from './Table';
+import { Meta, StoryObj } from "@storybook/react";
+import { Table } from "./Table";
 
 const meta: Meta<typeof Table> = {
-  title: 'Components/Table/Table',
+  title: "Components/Table/Table",
   component: Table,
 };
 
@@ -11,6 +11,6 @@ type Story = StoryObj<typeof Table>;
 
 export const Default: Story = {
   args: {
-    children: 'Table Content Placeholder',
+    children: "Table Content Placeholder",
   },
 };

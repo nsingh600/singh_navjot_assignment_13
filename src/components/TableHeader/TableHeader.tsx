@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { TableHeaderProps } from './TableHeader.types';
+import React from "react";
+import styled from "styled-components";
+import { TableHeaderProps } from "./TableHeader.types";
 
 const StyledThead = styled.thead`
   background-color: #f8f9fa;

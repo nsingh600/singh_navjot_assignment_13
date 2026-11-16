@@ -1,5 +1,5 @@
 export interface TextProps {
   content: string;
-  size?: 'small' | 'medium' | 'large';
-  color?: string;
+  variant?: 'body' | 'caption' | 'title';
+  className?: string;
 }
